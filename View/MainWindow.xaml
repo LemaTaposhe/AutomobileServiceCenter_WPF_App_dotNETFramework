@@ -1,0 +1,223 @@
+﻿<Window x:Class="Carcare.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Carcare"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1100"
+        WindowStyle="None"       
+        WindowStartupLocation="CenterScreen"
+        Background="Aqua"
+        AllowsTransparency="True">
+    
+
+    <Border CornerRadius="10"
+            BorderThickness="1"
+            Opacity="0.75">
+        <Border.Background>
+            <ImageBrush ImageSource="/Images/car-wash-background-m1vijpaj8do8rb9x.jpg"
+
+                Stretch="None"/>
+        </Border.Background>
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#462AD8" Offset="0"/>
+                <GradientStop Color="#DA34AE" Offset="0.75"/>
+                <GradientStop Color="#8A16C1" Offset="1"/>
+            </LinearGradientBrush>
+
+        </Border.BorderBrush>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <!--Navigation menu-->
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--Navigation Menu-->
+            <Border CornerRadius="10,0,0,10"
+                    Grid.Column="0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="1,0.7">
+                        <GradientStop Color="#060531" Offset="0"/>
+                        <GradientStop Color="#1B1448" Offset="0.75"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel>
+                    <!--Logo-->
+                    <StackPanel Orientation="Horizontal"
+                                Height="35"
+                                Margin="15,25,0,40">
+                        <TextBlock Text="Care for car"
+                                   Foreground="White"
+                                   FontSize="35"
+                                   FontFamily="Montserrat"
+                                   VerticalAlignment="Center"
+                                   Margin="10,0,0,0"></TextBlock>
+                                  
+                    </StackPanel>
+                        <!--Menu Buttons-->
+                    <Button x:Name="btnHome"
+        Background="Transparent"
+        BorderThickness="0"
+        Content="Home"
+        Foreground="White"
+        FontSize="16"
+        FontFamily="Montserrat"
+        Cursor="Hand"
+        Grid.Column="2"
+        Margin="0,30,0,0"
+        Click="btnHome_Click">
+
+                    </Button>
+                    <Button x:Name="btnService"
+Background="Transparent"
+BorderThickness="0"
+Content="Services"
+Foreground="White"
+FontSize="16"
+FontFamily="Montserrat"
+Cursor="Hand"
+Grid.Column="2"
+Margin="0,30,0,0"
+Click="btnService_Click">
+
+                    </Button>
+                    <Button x:Name="btnCustomer"
+Background="Transparent"
+BorderThickness="0"
+Content="Customers"
+Foreground="White"
+FontSize="16"
+FontFamily="Montserrat"
+Cursor="Hand"
+Grid.Column="2"
+Margin="0,30,0,0"
+Click="btnCustomer_Click">
+
+                    </Button>
+                    <Button x:Name="btnVehicle"
+Background="Transparent"
+BorderThickness="0"
+Content="Vehicles"
+Foreground="White"
+FontSize="16"
+FontFamily="Montserrat"
+Cursor="Hand"
+Grid.Column="2"
+Margin="0,30,0,0"
+Click="btnVehicle_Click">
+
+                    </Button>
+                    <Button x:Name="btnAppointment"
+Background="Transparent"
+BorderThickness="0"
+Content="Appointments"
+Foreground="White"
+FontSize="16"
+FontFamily="Montserrat"
+Cursor="Hand"
+Grid.Column="2"
+Margin="0,30,0,0"
+Click="btnAppointment_Click">
+
+                    </Button>
+                    <Button x:Name="btnInvoice"
+Background="Transparent"
+BorderThickness="0"
+Content="Invoice"
+Foreground="White"
+FontSize="16"
+FontFamily="Montserrat"
+Cursor="Hand"
+Grid.Column="2"
+Margin="0,30,0,0"
+Click="btnInvoice_Click">
+
+                    </Button>
+                    <Button x:Name="btnPffer"
+Background="Transparent"
+BorderThickness="0"
+Content="PromotionalOffer"
+Foreground="White"
+FontSize="16"
+FontFamily="Montserrat"
+Cursor="Hand"
+Grid.Column="2"
+Margin="0,30,0,0"
+Click="btnPffer_Click">
+
+                    </Button>
+                    <Button x:Name="btnEmloyee"
+Background="Transparent"
+BorderThickness="0"
+Content="Employees"
+Foreground="White"
+FontSize="16"
+FontFamily="Montserrat"
+Cursor="Hand"
+Grid.Column="2"
+Margin="0,30,0,0"
+Click="btnEmloyee_Click">
+
+                    </Button>
+
+                </StackPanel>                          
+            </Border>
+            <!--Main Section-->
+            <Border CornerRadius="0,10,10,0"
+        Grid.Column="1">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                        <GradientStop Color="#060531" Offset="0"/>
+                        <GradientStop Color="#1B1448" Offset="0.75"/>
+                    </LinearGradientBrush>
+
+                </Border.Background>
+
+            </Border>
+            <Button x:Name="btnMinimize"
+         Background="Transparent"
+         BorderThickness="0"
+         Content="-"
+         Foreground="White"
+         FontSize="45"
+         FontFamily="Montserrat"
+         Cursor="Hand"
+         Grid.Column="1"
+         Click="btnMinimize_Click">
+
+            </Button>
+            <Button x:Name="btnClose"
+         Background="Transparent"
+         BorderThickness="0"
+         Content="X"
+         Foreground="White"
+         FontSize="50"
+         FontFamily="Montserrat"
+         Cursor="Hand"
+         Grid.Column="2"
+         Click="btnClose_Click">
+
+            </Button>
+
+            <!-- Main Section -->
+            <Border CornerRadius="0,10,10,0"
+                    Grid.Column="1"
+                    Grid.Row="1">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                        <GradientStop Color="#060531" Offset="0"/>
+                        <GradientStop Color="#1B1448" Offset="0.75"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <!-- Add an image to the Main Section -->
+                <Image Source="/Images/images (1).jpg" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+
+
+        </Grid>
+        
+    </Border>
+</Window>
